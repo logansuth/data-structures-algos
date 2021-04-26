@@ -32,3 +32,4 @@ console.log(decode('111')); // 3
 console.log(decode('2')); // 1
 console.log(decode('79')); // 1
 console.log(decode('26')); // 2
+console.log(decode('11133')); // 4

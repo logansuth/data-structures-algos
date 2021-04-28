@@ -35,8 +35,10 @@ const QUERIES = [5, 1, 4];
 
 function minimumWait(queries) {
   queries.sort((a, b) => a - b);
+
   const memo = [0];
   let sum = 0;
+
   for (let i = 1; i < queries.length; i++) {
     memo[i] = queries[i - 1] + memo[i - 1];
     sum += memo[i];

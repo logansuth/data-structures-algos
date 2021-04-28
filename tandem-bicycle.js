@@ -57,7 +57,7 @@ function findSpeed(redArray, blueArray, fastest) {
         redPointer--;
         counter++;
       } else {
-        sum += bluePointer[bluePointer];
+        sum += blueArray[bluePointer];
         bluePointer--;
         counter++;
       }
@@ -70,4 +70,4 @@ function findSpeed(redArray, blueArray, fastest) {
 const redSpeeds = [5, 5, 3, 9, 2];
 const blueSpeeds = [3, 6, 7, 2, 1];
 
-console.log(findSpeed(redSpeeds, blueSpeeds, true));
+console.log(findSpeed(redSpeeds, blueSpeeds, false));

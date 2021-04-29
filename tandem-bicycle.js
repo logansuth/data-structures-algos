@@ -52,13 +52,15 @@ function findSpeed(redArray, blueArray, fastest) {
         counter++;
       }
     } else {
-      if (redArray[redPointer] < blueArray[bluePointer]) {
+      if (redArray[redPointer] > blueArray[bluePointer]) {
         sum += redArray[redPointer];
         redPointer--;
+        bluePointer--;
         counter++;
       } else {
         sum += blueArray[bluePointer];
         bluePointer--;
+        redPointer--;
         counter++;
       }
     }

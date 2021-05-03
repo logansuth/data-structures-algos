@@ -17,7 +17,7 @@ add key, modulo 26
 find new string,
 */
 
-const createAlphabetObj = (alphaString) => {
+const createAlphaObj = (alphaString) => {
   const obj = {};
 
   for (let i = 0; i < 27; i++) {
@@ -29,14 +29,13 @@ const createAlphabetObj = (alphaString) => {
 
 const encrypt = (string, key) => {
   const alphaString = 'abcdefghijklmnopqrstuvwxyz';
-  const alphaObj = createAlphabetObj(alphaString);
+  const alphaObj = createAlphaObj(alphaString);
 
   let newString = '';
 
   for (let i = 0; i < string.length; i++) {
     let char = string[i];
-    let number = alphaObj[char];
-    number = (number + key) % 26;
+    let number = (alphaObj[char] + key) % 26;
     if (number === 0) number = 26;
     newString += alphaString[number - 1];
   }

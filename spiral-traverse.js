@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-condition */
 /*
 args = (n * m two-dim array)
 return = (one dim arrray elements in spiral order)
